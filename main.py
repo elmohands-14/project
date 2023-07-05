@@ -18,39 +18,77 @@ lblName = Label(entries_frame,text="Name",font=("Calibri",16),bg="#2c3e50",fg="w
 lblName.place(x=10,y=50)
 textName = Entry(entries_frame,width=20,font=("Calibri",16))
 textName.place(x=120,y=50)
-
-
 lbljob = Label(entries_frame,text="Job",font=("Calibri",16),bg="#2c3e50",fg="white")
 lbljob.place(x=10,y=90)
 textjob = Entry(entries_frame,width=20,font=("Calibri",16))
 textjob.place(x=120,y=90)
-
 lblgender = Label(entries_frame,text="Gender",font=("Calibri",16),bg="#2c3e50",fg="white")
 lblgender.place(x=10,y=130)
 combogender = ttk.Combobox(entries_frame,state="readonly",width=18,font=("Calibri",16))
 combogender['values'] = ("Male","Female")
 combogender.place(x=120,y=130)
-
 lblage = Label(entries_frame,text="Age",font=("Calibri",16),bg="#2c3e50",fg="white")
 lblage.place(x=10,y=170)
 textage = Entry(entries_frame,width=20,font=("Calibri",16))
 textage.place(x=120,y=170)
-
 lblemail = Label(entries_frame,text="Email",font=("Calibri",16),bg="#2c3e50",fg="white")
 lblemail.place(x=10,y=210)
 textemail = Entry(entries_frame,width=20,font=("Calibri",16))
 textemail.place(x=120,y=210)
-
 lblcontact = Label(entries_frame,text="Mobile",font=("Calibri",16),bg="#2c3e50",fg="white")
 lblcontact.place(x=10,y=250)
 textcontact = Entry(entries_frame,width=20,font=("Calibri",16))
 textcontact.place(x=120,y=250)
-
-
 lbladdress = Label(entries_frame,text="Address :",font=("Calibri",16),bg="#2c3e50",fg="white")
 lbladdress.place(x=10,y=290)
 textaddress = Text(entries_frame,width=30,height=2,font=("Calibri",16))
 textaddress.place(x=10,y=330)
 
+# =============Buttons Frame ================
+
+btn_frame = Frame(entries_frame,bd=1,relief=SOLID,bg="#2c3e50")
+btn_frame.place(x=10,y=400,width=335,height=100)
+
+btnadd =Button(btn_frame,
+               text="Add Details",
+               width=14,
+               height=1,
+               font=("Calibri",16),
+               fg="white",
+               bg="#16a085",
+               bd=0
+               ).place(x=4,y=5)
+
+
+btnedit =Button(btn_frame,
+               text='Update Details',
+               width=14,
+               height=1,
+               font=("Calibri",16),
+               fg="white",
+               bg="#2980b9",
+               bd=0
+               ).place(x=4,y=50)
+
+btndelete =Button(btn_frame,
+               text='Delete Details',
+               width=14,
+               height=1,
+               font=("Calibri",16),
+               fg="white",
+               bg="#c0392b",
+               bd=0
+               ).place(x=170,y=5)
+
+
+btnclear =Button(btn_frame,
+               text="Clear Details",
+               width=14,
+               height=1,
+               font=("Calibri",16),
+               fg="white",
+               bg="#f39c12",
+               bd=0
+               ).place(x=170,y=50)
 
 root.mainloop()
