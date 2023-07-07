@@ -4,9 +4,14 @@ from tkinter import ttk
 
 root = Tk()
 root.title("Employee Management System")
-root.geometry("1310x515+20+100")
+root.geometry("1240x615+20+100")
 root.resizable(False,False)
 root.configure(bg="#2c3e50")
+
+
+logo = PhotoImage(file='logo2.png')
+lbl_logo = Label(root,image=logo,bg='#2c3e50')
+lbl_logo.place(x=80,y=510)
 
 #============== Entries frame ==========
 
@@ -44,6 +49,17 @@ lbladdress.place(x=10,y=290)
 textaddress = Text(entries_frame,width=30,height=2,font=("Calibri",16))
 textaddress.place(x=10,y=330)
 
+
+#====== [Define] =============
+def hide():
+    root.geometry("360x510")
+def show():
+    root.geometry("1240x615")
+
+btnhide = Button(entries_frame,text="HIDE",bg="white",bd=1,relief=SOLID ,cursor='hand2',command=hide)
+btnhide.place(x=270,y=10)
+btnshow = Button(entries_frame,text="SHOW",bg='white',bd=1,relief=SOLID,cursor='hand2',command=show)
+btnshow.place(x=310,y=10)
 # =============Buttons Frame ================
 
 btn_frame = Frame(entries_frame,bd=1,relief=SOLID,bg="#2c3e50")
@@ -94,13 +110,13 @@ btnclear =Button(btn_frame,
 
 #========== [table frame] =================
 treeframe = Frame(root,bg="white")
-treeframe.place(x=365,y=1,width=940,height=510)
+treeframe.place(x=365,y=1,width=875,height=610)
 
 # @
 style = ttk.Style()
-style.configure("test.Treeview",font=("calibri",13),rowheight=50)
+style.configure("mystyle.Treeview",font=("calibri",13),rowheight=50)
 style.configure("mystyle.Treeview.Heading",font=("calibri",13))
-tv = ttk.Treeview(treeframe,columns=(1,2,3,4,5,6,7,8),style="test.Treeview")
+tv = ttk.Treeview(treeframe,columns=(1,2,3,4,5,6,7,8),style="mystyle.Treeview")
 
 tv.heading("1",text="Id")
 tv.column("1",width="40")
@@ -127,11 +143,11 @@ tv.heading("7",text="Mobile")
 tv.column("7",width="150")
 
 tv.heading("8",text="Address")
-tv.column("8",width="190")
+tv.column("8",width="150")
 
 tv['show'] = 'headings'
 
-tv.pack()
+tv.place(x=1,y=1,height=610,width=875)
 
 
 root.mainloop()
