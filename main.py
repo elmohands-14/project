@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+import db
 
 root = Tk()
 root.title("Employee Management System")
