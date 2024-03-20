@@ -2,9 +2,7 @@ from tkinter import *
 from tkinter import ttk
 <<<<<<< HEAD
 #hacker me
-=======
 # salah ali
->>>>>>> 50c5d52f03f63d3dc16d6356efea999e946cc6cc
 
 root = Tk()
 root.title("tester")
