@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+# salah ali
 
 root = Tk()
 root.title("tester")
